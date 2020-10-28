@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Mission to Mars - Landing Page</title>
+
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body class="text-white" style="background-color:black;">
+    <div class="container">
+  
+      <!-- News Section -->
+  <div class="container">
+    <h3> Lastest Mars News</h3>
+    <h6 style="color: #f8081c">{{ mars_data.news_title }}</h6>
+    <p>{{ mars_data.news_p }}</p>
+  </div>
+
+    <!-- Mars Images -->   
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <h3>Featured Mars Image</h3>
+        <img src="{{ mars_data.featured_image_url }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Facts Section -->   
+  <div class="container">
+    <h3> Mars Facts </h3>
+          <div>{{ mars_data.facts_html |safe }}</div>
+    </div>
+  </div> 
+
+  <!-- Facts Section -->   
+  <div class="container">
+    <h3> Mars Hemispheres </h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card" style="size: 25rem;">
+        <img src="{{ mars_data.image_url }}" class="card-img-top" alt="{{ mars_data.title }}">
+        <div class="card-body">
+              <p class="card-text"><b> {{ mars_data.title }} </b></p>
+
+
+    </div>
+
+
+
+  </body>
+
+</html>
+  
